@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.jpg" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Segun Olanitori | Portfolio </title>
+  <meta name="Description"
+    content="A self-taught Front-End web developer based in Lagos, Nigeria. I am passionate about building websites with modern technologies with concern for SEO, image optimization, user experience and mobile responsiveness.">
+  <meta name="keywords"
+    content="Olanitori, Segun, portfolio, modern websites, responsiveness, SEO, HTML, CSS, JavaScript, ReactJS" />
+  <meta name="author" content="Segun Olanitori" />
+  <meta property="og:description"
+    content="A self-taught Front-End web developer based in Lagos, Nigeria. I am passionate about building websites with modern technologies with concern for SEO, image optimization, user experience and mobile responsiveness." />
+  <meta name="twitter:title" content="Segun Olanitori Portfolio">
+  <meta name="twitter:description"
+    content="A self-taught Front-End web developer based in Lagos, Nigeria. I am passionate about building websites with modern technologies with concern for SEO, image optimization, user experience and mobile responsiveness." />
+  <meta name="twitter:image"
+    content="favicon.jpg" />
+  <meta name="twitter:site" content="@segun_os">
+  <meta name="twitter:creator" content="@segun_os">
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Segun Olanitori Portfolio" />
+  <meta property="og:image"
+    content="favicon.jpg" />
+  <meta property="og:site_name" content="Segun Olanitori Portfolio" />
+  <script src="https://kit.fontawesome.com/c772bfb479.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <noscript style="color: red; font-size: 25px; text-align: center; margin-top: 45px;">You need to enable JavaScript to
+    run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    window.onload = () => {
+      let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+      bannerNode.parentNode.removeChild(bannerNode);
+    }
+  </script>
+  <!-- <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('worker.js').then(function(registration) {
+          console.log('Worker registration successful', registration.scope);
+        }, function(err) {
+          console.log('Worker registration failed', err);
+        }).catch(function(err) {
+          console.log(err);
+        });
+      });
+    } else {
+      console.log('Service Worker is not supported by browser.');
+    }
+  </script> -->
+</body>
+
+</html>
