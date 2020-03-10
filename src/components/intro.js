@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+
 
 
 function Intro({ darkMode }) {
@@ -12,10 +14,13 @@ function Intro({ darkMode }) {
  
   return (
     <div className={darkMode ? 'intro' : 'intro introDark'}>
+          <Helmet>
+            <title>Home | Segun Olanitori Portfolio</title>
+        </Helmet>
       <div className="intro-description">
         {/* <p>Welcome to My Portfolio!</p> */}
         <p>I am <span style={{ color: 'hsl(228, 45%, 44%)' }}>Segun Olanitori</span> </p>
-        <p> A self-taught Front-End Web Developer who loves to build user friendly websites with the best technologies.</p>
+        <p> An internet-taught Front-End Web Developer who loves to build user friendly solutions on the web with the best technologies.</p>
       </div>
       <div className="intro-items">
         <Link to='/contact' style={linkstyle}>

@@ -1,8 +1,12 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 
 function Skills({ darkMode }) {
   return (
     <div className={darkMode ? "skills" : "skills skillsDark"}>
+      <Helmet>
+            <title>Skills | Segun Olanitori Portfolio</title>
+        </Helmet>
       <h3>My Current Skills include...</h3>
       <div className="skills-wrap">
         <div className="skills-item">

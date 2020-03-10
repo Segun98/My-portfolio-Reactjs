@@ -175,7 +175,7 @@ body {
 .intro-description p:nth-child(2) {
   text-align: center;
   margin: auto;
-  width: 90%;
+  width: 70%;
   font-size: 20px;
   animation: second 4s ease-in forwards;
 }
@@ -314,7 +314,7 @@ body {
 ABOUT COMPONENT STYLES */
 
 .about {
-  color: #333;
+  color: rgb(100, 100, 100);
   background-color: whitesmoke;
   transition: 0.3s ease-in-out;
 }
@@ -563,6 +563,7 @@ ABOUT COMPONENT STYLES */
   color: black;
   background-color: whitesmoke;
   transition: 0.3s ease-in-out;
+  height: 100vh;
 }
 
 .contact.contactDark {
@@ -651,9 +652,9 @@ ABOUT COMPONENT STYLES */
     color: #AC3B61;
   } */
 
-  .about {
+  /* .about {
     height: 100vh;
-  }
+  } */
 
   .about-wrap {
     flex-direction: row;
@@ -666,7 +667,7 @@ ABOUT COMPONENT STYLES */
   }
 
   .about-wrap .about-text {
-    margin-top: 100px;
+    margin-top: 60px;
     padding-left: 20px;
   }
 
@@ -699,7 +700,7 @@ ABOUT COMPONENT STYLES */
 }
 
 .contact-page-wrap h4 {
-  color: blue;
+  color: hsl(228, 45%, 44%);
 }
 
 .contact-page-wrap .icon {
@@ -729,7 +730,7 @@ form {
 }
 
 .form-wrap label {
-  color: blue;
+  color: hsl(228, 45%, 44%);
 }
 
 .form-wrap input {
@@ -749,15 +750,11 @@ form {
 
 .form-button button {
   border: none;
-  background: blue;
+  background: hsl(228, 45%, 44%);
   color: white;
   padding: 7px 15px;
   cursor: pointer;
   border-radius: 5px;
-}
-
-.form-wrap textarea {
-  margin-top: -11px;
 }
 
 @media only screen and (min-width: 760px) {
@@ -813,9 +810,11 @@ form {
 
 @media only screen and (min-width: 1400px) {}
 
-@media only screen and (min-width: 2500px) {
+@media only screen and (min-width: 2000px) {
 
-
+  .about-wrap {
+    width: 55%;
+  }
   .contact-page-body {
     width: 50%;
   }

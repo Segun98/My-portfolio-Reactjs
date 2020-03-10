@@ -15,7 +15,7 @@ function App() {
   const [darkMode, setDarkmode] = useState(true)
   function handleDarkmode() {
     setDarkmode(prevMode => !prevMode)
-    console.log('darkMode event fired')
+    //console.log('darkMode event fired')
   }
   return (
     <Router>

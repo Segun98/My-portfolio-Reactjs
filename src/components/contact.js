@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import { Helmet } from 'react-helmet';
 
 function Contact({ darkMode }) {
 
@@ -24,22 +25,26 @@ function Contact({ darkMode }) {
 
     const payload = {
       email: email,
-      text: `Name: ${name}; Message Body: ${moreinfo}`
+      text:`
+      Name: ${name}
+
+
+      Body: ${moreinfo}`
     };
 
     axios({
-      url: "http://localhost:8080/mail",
+      url: "/api/mail",
       method: "POST",
       data: payload
     })
       .then(() => {
-        console.log("data has been sent to the server");
-        // alert('Order Recived!!!')
+        //console.log("data has been sent to the server");
+        alert('MESSAGE SENT!!!')
         // location.reload();
       })
       .catch(() => {
-        console.log("internal server error");
-        // alert('an error occured');
+        //console.log("internal server error");
+        alert('SORRY FOR THIS INCONVENIENCE, AN ERROR OCCURED. PLEASE USE THE ICONS BELOW THE CONTACT FORM WHILE I FIX THE ISSUE, THANK YOU!');
       });
     setName("");
     setEmail("");
@@ -48,6 +53,9 @@ function Contact({ darkMode }) {
  
   return (
     <div className={darkMode ? "contact" : "contact contactDark"}>
+      <Helmet>
+            <title>Contact Me | Segun Olanitori Portfolio</title>
+        </Helmet>
       <h4>Contact Me...</h4>
         <section className="contact-page-body">
           <section className="contact-page-form">
@@ -59,7 +67,7 @@ function Contact({ darkMode }) {
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Name"
+                    placeholder="Your Name..."
                     required
                     autoComplete="on"
                     value={name}
@@ -68,7 +76,7 @@ function Contact({ darkMode }) {
                 </div>
                 
                 <div className="form-wrap">
-                  <label htmlFor="email">Email:</label>
+                  <label htmlFor="email">Email<span style={{fontSize:'12px'}}>(gmail preferably)</span>:</label>
                   <input
                     type="email"
                     name="email"
@@ -90,6 +98,7 @@ function Contact({ darkMode }) {
                     rows="12"
                     value={moreinfo}
                     onChange={handleMoreinfo}
+                    placeholder="Start typing..."
                     required
                   ></textarea>
                 </div>

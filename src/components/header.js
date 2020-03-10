@@ -28,14 +28,14 @@ function Header({darkMode, handleDarkmode}) {
         <div className="header-component">
             <div className={darkMode? 'header' : 'header headerDark'}>
                 <div className="header-wrap">
-                    <div className="hamburger" onClick={toggleNav}>
+                    <div className="hamburger" onClick={toggleNav} title='Menu'>
                         <i className="fa fa-bars" aria-hidden="true"></i>
                     </div>
                     <Link to='/' style={linkstyle}>
-                        <div className='logo'>SegunOS</div>
+                        <div className='logo' title='Logo'>SegunOS</div>
                     </Link>
                     {/* <div className="available" style={{ color: 'white' }}> <i className="fa fa-circle fa-xs" aria-hidden="true" style={{ color: 'rgb(73, 240, 73)' }}></i> Available for hire</div> */}
-                    <div className="darkModeIcon" onClick={handleDarkmode}>
+                    <div className="darkModeIcon" onClick={handleDarkmode} title='DarkMode'>
                         {darkMode? 'Darkmode' : 'Lightmode'}
                     </div>
                 </div>
